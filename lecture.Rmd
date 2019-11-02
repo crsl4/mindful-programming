@@ -32,6 +32,9 @@ link to wilson 2014: https://journals.plos.org/plosbiology/article?id=10.1371/jo
 
 
 # organization of projects (stolen from karl broman)
+
+![](http://www.phdcomics.com/comics/archive/phd052810s.gif)
+
 - put everything in a common directory. If using RStudio, for example, create a new project which will contain all the files corresponding to this project. You can link this project to a gthub repository (see below)
 - separate raw from processed data
   - it is tempting to hand-edit the files: don't!
@@ -42,7 +45,9 @@ link to wilson 2014: https://journals.plos.org/plosbiology/article?id=10.1371/jo
 - slow down and document
 
 # write clear code (stolen from karl broman)
-https://geekandpoke.typepad.com/geekandpoke/2008/02/the-art-of-prog.html
+
+![](https://geekandpoke.typepad.com/geekandpoke/images/2008/02/04/aop1b.jpg)
+
 - first code that works, then efficiency
 - readable for humans; code format: indentation, white space, meaningful names
 - modular, reusable (no copy-paste of lines: functions)
@@ -57,8 +62,12 @@ https://geekandpoke.typepad.com/geekandpoke/2008/02/the-art-of-prog.html
 # git
 
 ## why version control git/github?
-- image of the final doc: http://phdcomics.com/comics/archive_print.php?comicid=1531
-- image https://xkcd.com/1597/ https://imgs.xkcd.com/comics/git.png
+- image of the final doc: 
+
+![](http://www.phdcomics.com/comics/archive/phd101212s.gif)
+
+![Reference: xkcd](https://imgs.xkcd.com/comics/git.png)
+
 - history of changes, time travel, peace of mind about breaking stuff:
 Using a Git commit is like using anchors and other protection when climbing. If you’re crossing a dangerous rock face you want to make sure you’ve used protection to catch you if you fall. Commits play a similar role: if you make a mistake, you can’t fall past the previous commit. Coding without commits is like free-climbing: you can travel much faster in the short-term, but in the long-term the chances of catastrophic failure are high! Like rock climbing protection, you want to be judicious in your use of commits. Committing too frequently will slow your progress; use more commits when you’re in uncertain or dangerous territory. Commits are also helpful to others, because they show your journey, not just the destination. (R Packages, Hadley Wickham (Wickham (2015)))
 - collaborating with others
