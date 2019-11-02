@@ -1,0 +1,123 @@
+---
+title: "From mindful programming to reproducible research"
+author: "Claudia Solis-Lemus"
+date: "2019-11-2"
+output:
+  html_document:
+    keep_md: true
+---
+
+# shameless copy from
+Cecile Ane class https://github.com/cecileane/computingtools
+Jenny Bryan Happy git with R https://happygitwithr.com/
+Karl Broman tools4rr http://kbroman.org/Tools4RR/
+UW software carpentry https://uw-madison-datascience.github.io/2019-06-13-uwmadison-swc/
+
+# why do we care about best practices and reproducibility?
+- your closest collaborator is you six months ago, and you do not reply to emails (Karl Broman)
+- everything via code -> avoid embarrassment, save time, avoid mistakes
+- The most important tool is the mindset, when starting, that the end product will be reproducible (Keith Baggerly)
+- assume that everything that you, you will need to redo at some point in the future: be paranoid and prepared
+
+# best practices
+link to wilson 2014: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745
+1. Write programs for people, not computers
+2. Let the computer do the work (functions, scripts)
+3. Make incremental changes (use version control)
+4. Don’t repeat yourself (or others): no copy-paste!
+5. Plan for mistakes (add assersions to programs, code defensively)
+6. Optimize software only after it works correctly
+7. Document design and purpose, not mechanics
+8. Collaborate (github pull requests/issues)
+
+
+# organization of projects (stolen from karl broman)
+- put everything in a common directory. If using RStudio, for example, create a new project which will contain all the files corresponding to this project. You can link this project to a gthub repository (see below)
+- separate raw from processed data
+  - it is tempting to hand-edit the files: don't!
+- separate code from data
+- don't use absolute paths
+- use readme files to explain structure of folder and files within folder/subfolders; treat as a "Dear journal"
+- use Rmd files for data analyses and reports: https://bookdown.org/yihui/rmarkdown/
+- slow down and document
+
+# write clear code (stolen from karl broman)
+https://geekandpoke.typepad.com/geekandpoke/2008/02/the-art-of-prog.html
+- first code that works, then efficiency
+- readable for humans; code format: indentation, white space, meaningful names
+- modular, reusable (no copy-paste of lines: functions)
+- write general code (not specific to data/situation at hand)
+- no global variables ever
+- comment big picture, major sections, input/output, not minor details of functions; plan to spend 1/4 time commenting (karl broman)
+- meaningful error messages; tests/checks for inputs; document assumptions on input (rows vs columns)
+- code defensively (handle cases that "can't happen")
+- slow down, breathe, don't be in a hurry!
+
+
+
+
+# git
+
+## why version control git/github?
+- image of the final doc: http://phdcomics.com/comics/archive_print.php?comicid=1531
+- image https://xkcd.com/1597/ https://imgs.xkcd.com/comics/git.png
+- history of changes, time travel, peace of mind about breaking stuff:
+Using a Git commit is like using anchors and other protection when climbing. If you’re crossing a dangerous rock face you want to make sure you’ve used protection to catch you if you fall. Commits play a similar role: if you make a mistake, you can’t fall past the previous commit. Coding without commits is like free-climbing: you can travel much faster in the short-term, but in the long-term the chances of catastrophic failure are high! Like rock climbing protection, you want to be judicious in your use of commits. Committing too frequently will slow your progress; use more commits when you’re in uncertain or dangerous territory. Commits are also helpful to others, because they show your journey, not just the destination. (R Packages, Hadley Wickham (Wickham (2015)))
+- collaborating with others
+- image of example repo, history, commit
+- more reading: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007142
+
+
+# testing code (stolen from karl broman)
+types of tests:
+Check inputs
+– Stop if the inputs aren't as expected.
+Unit tests
+– For each small function: does it give the right results in
+specific cases?
+Integration tests
+– Check that larger multi-function tasks are working.
+Regression tests
+– Compare output to saved results, to check that things that
+worked continue working
+
+
+`assertthat` package
+```
+#' import assertthat
+winsorize <-
+function(x, q=0.006)
+{
+if(all(is.na(x)) || is.null(x)) return(x)
+assert_that(is.numeric(x))
+assert_that(is.number(q), q>=0, q<=1)
+lohi <- quantile(x, c(q, 1-q), na.rm=TRUE)
+if(diff(lohi) < 0) lohi <- rev(lohi)
+x[!is.na(x) & x < lohi[1]] <- lohi[1]
+x[!is.na(x) & x > lohi[2]] <- lohi[2]
+x
+}
+```
+
+`testthat` package
+```
+test_that("winsorize works for small vectors", {
+x <- c(2, 3, 7, 9, 6, NA, 5, 8, NA, 0, 4, 1, 10)
+result1 <- c(2, 3, 7, 9, 6, NA, 5, 8, NA, 1, 4, 1, 9)
+result2 <- c(2, 3, 7, 8, 6, NA, 5, 8, NA, 2, 4, 2, 8)
+expect_identical(winsorize(x, 0.1), result1)
+expect_identical(winsorize(x, 0.2), result2)
+})
+```
+store tests in `tests/testthat.R`:
+```
+library(testthat)
+test_check("mypkg")
+```
+turn bugs into tests, don't make same mistake twice
+automate tests with Codecov within github: https://codecov.io/
+
+
+# relax
+- enjoy the process, make mistakes (git will catch you), learn as you go
+- code with purpose, be present
