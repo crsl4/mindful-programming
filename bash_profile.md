@@ -1,4 +1,6 @@
-# function from Karl Broman:
+Function from Karl Broman.
+Copy the text below in your `.bash_profile` file for Mac OS.
+```
 function color_my_prompt {
     local __user_and_host="\[\033[01;32m\]\u@\h"
     local __cur_location="\[\033[01;34m\]\w"
@@ -28,3 +30,4 @@ function color_my_prompt {
 
 # Tell bash to execute this function just before displaying its prompt.
 PROMPT_COMMAND=color_my_prompt
+```
