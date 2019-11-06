@@ -14,7 +14,7 @@ This website tries to highlight key practices in programming and reproducibility
 - Karl Broman's class on [Tools for Reproducible Research](http://kbroman.org/Tools4RR/)
 - UW-Madison [software carpentry](https://uw-madison-datascience.github.io/2019-06-13-uwmadison-swc/)
 
-So, make sure to check these resources too. test
+So, make sure to check these resources too.
 
 # 0. Why do we care about best practices and reproducibility?
 - *Your closest collaborator is you six months ago, and you do not reply to emails* -- Karl Broman
@@ -220,6 +220,8 @@ Do you think you are prepared to tackle any branch problem? Try [this example](h
 
 ### 1.3.7 Forking other people's repository
 
+_Images and example from Jenny Bryan's tutorial._
+
 Sometimes you identify a repository that does work that you are interested in, but perhaps you would like to do some modification.
 You can fork this repository, and work on the forked version as if it were your own repository (everything we've studied applies).
 
@@ -268,6 +270,7 @@ After you've done work in your fork, and are ready to create a pull request in g
 ### 1.3.8 Troubleshooting
 
 ![Reference: xkcd](https://imgs.xkcd.com/comics/git.png)
+_Reference: xkcd_
 
 #### 1.3.8.1 Amending commits
 You might want to do sequential progress with the code, but not necessarily have one commit per every single change. You can use `git commit --amend` to re-write specific commits.
@@ -325,7 +328,7 @@ And this is your local state:
 ```
 A -- B -- D (what you have)
 ```
-The easiests thing is to do `git pull` and then work out the merging issues (like with branches):
+The easiest thing is to do `git pull` and then work out the merging issues (like with branches):
 ```
 $ git pull
 Auto-merging foo.R
