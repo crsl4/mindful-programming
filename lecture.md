@@ -14,7 +14,7 @@ This website tries to highlight key practices in programming and reproducibility
 - Karl Broman's class on [Tools for Reproducible Research](http://kbroman.org/Tools4RR/)
 - UW-Madison [software carpentry](https://uw-madison-datascience.github.io/2019-06-13-uwmadison-swc/)
 
-So, make sure to check these resources too.
+So, make sure to check these resources too. test
 
 # 0. Why do we care about best practices and reproducibility?
 - *Your closest collaborator is you six months ago, and you do not reply to emails* -- Karl Broman
@@ -260,7 +260,7 @@ upstream  https://github.com/OWNER/REPO.git (push)
 
 Now you can pull changes from `upstream` to keep your forked repo updated with the original repo:
 ```
-git pull upstream master --ff-only
+git pull upstream master
 ```
 
 After you've done work in your fork, and are ready to create a pull request in github, see [here](https://happygitwithr.com/pr-extend.html).
