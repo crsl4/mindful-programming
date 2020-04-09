@@ -13,6 +13,7 @@ This website tries to highlight key practices in programming and reproducibility
 - Jenny Bryan's [Happy git with R](https://happygitwithr.com/)
 - Karl Broman's class on [Tools for Reproducible Research](http://kbroman.org/Tools4RR/)
 - UW-Madison [software carpentry](https://uw-madison-datascience.github.io/2019-06-13-uwmadison-swc/)
+- Jenny Bryan's [How to name files](https://speakerdeck.com/jennybc/how-to-name-files)
 
 So, make sure to check these resources too.
 
@@ -48,6 +49,14 @@ This section is inspired by Karl Broman's notes.
 - Use readme and markdown (`md`) files to explain structure of folder and files within folder/subfolders; create logfiles as a "Dear diary" with details of analyses. See this [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - Use R Markdown (`Rmd`) files for data analyses and reports. See this [R Markdown tutorial](https://bookdown.org/yihui/rmarkdown/)
 - Slow down and think about file/folder organization
+
+Convention on naming files (very important for globbing to narrow file listing):
+
+- Avoid spaces, punctuation, accented characters, case sensitivity
+- Deliberate use of delimiters
+- Name contains info on content
+- Put something numeric first (left pad numbers with zeros)
+- Use the ISO 8601 standard for dates: YYYY-MM-DD
 
 ## 1.2 Write clear code
 
