@@ -14,6 +14,8 @@ This website tries to highlight key practices in programming and reproducibility
 - Karl Broman's class on [Tools for Reproducible Research](http://kbroman.org/Tools4RR/)
 - UW-Madison [software carpentry](https://uw-madison-datascience.github.io/2019-06-13-uwmadison-swc/)
 - Jenny Bryan's [How to name files](https://speakerdeck.com/jennybc/how-to-name-files)
+- Seth Robertson's [Undoing commits in git](http://sethrobertson.github.io/GitFixUm/fixup.html)
+
 
 So, make sure to check these resources too.
 
