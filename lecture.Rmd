@@ -19,6 +19,8 @@ This website tries to highlight key practices in programming and reproducibility
 
 So, make sure to check these resources too.
 
+There is a [YouTube video](https://youtu.be/7KCqpL0cde8) of these topics.
+
 # Why do we care about best practices and reproducibility?
 - *Your closest collaborator is you six months ago, and you do not reply to emails* -- Karl Broman
 - Everything via code -> avoid embarrassment, save time, avoid mistakes
