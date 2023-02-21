@@ -18,4 +18,4 @@
 - Code with purpose, be present, be mindful
     - Don't rush! You have spent years collecting data. Honor that process through mindful and reproducible data analyses
 
-<div style="text-align:center"><img src="images/sunroom.png" width="700"/></div>
+<div style="text-align:center"><img src="images/sunroom.jpeg" width="700"/></div>
