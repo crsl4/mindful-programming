@@ -245,7 +245,7 @@ _Images and example from Jenny Bryan's tutorial._
 Sometimes you identify a repository that does work that you are interested in, but perhaps you would like to do some modification.
 You can fork this repository, and work on the forked version as if it were your own repository (everything we've studied applies).
 
-![Image from Jenny Bryan](https://happygitwithr.com/img/fork-and-clone.png)
+![Image from Jenny Bryan](https://happygitwithr.com/img/fork-them.jpeg)
 
 For this example (from Jenny Bryan's website), the original repository is `OWNER/REPO`, and after clicking `Fork` on github, you will have a `YOU/REPO`.
 
@@ -385,6 +385,11 @@ Try out the exercises in Jenny Bryan's website:
 - [Bingo](https://happygitwithr.com/bingo.html)
 - [Burn](https://happygitwithr.com/burn.html)
 - [Reset](https://happygitwithr.com/reset.html)
+
+
+**git/GitHub summary:**
+
+<div style="text-align:center"><img src="images/lecture3-flowchart.png" width="700"/></div>
 
 ## 1.4 Testing code
 
