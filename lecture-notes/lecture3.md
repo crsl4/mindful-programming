@@ -299,4 +299,4 @@ Try out the exercises in Jenny Bryan's website:
 
 ## git/GitHub summary
 
-<div style="text-align:center"><img src="images/lecture3-flowchart.png" width="700"/></div>
+<div style="text-align:center"><img src="../images/lecture3-flowchart.png" width="700"/></div>
