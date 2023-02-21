@@ -84,7 +84,7 @@ Once in the new branch, you can make changes to the files, and these changes wil
 
 Based on Karl Broman's code, I changed my `.bash_profile` file to write the name of the branch where I am in the prompt.
 
-![](images/prompt.png)
+![](../images/prompt.png)
 
 See more details in the [bash_profile.md file](https://github.com/crsl4/mindful-programming/blob/master/old-notes/bash_profile.md).
 
@@ -172,8 +172,6 @@ origin  https://github.com/YOU/REPO.git (push)
 which allows you to push/pull to this forked repository.
 
 But you will most likely also like to pull changes from the original repository
-
-![Image from Jenny Bryan](https://happygitwithr.com/img/fork-triangle-happy.png)
 
 So, you can add the original repo `OWNER/REPO` as a remote in your repo:
 ```
