@@ -50,3 +50,22 @@ This section is inspired by Karl Broman's notes.
   - Machine learning: rows=variables, columns=individuals
 - Code defensively; handle cases that "can't happen"
 - Slow down, breathe, don't be in a hurry!
+
+## Data Organization in spreadsheets
+
+[(Broman and Woo, 2017)](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)
+
+1. Be consistent
+  - Don't use female/male and F/M in the same file
+2. Choose good names for things
+  - No spaces in column names (or anywhere)
+  - Avoid special characters
+3. Write dates as YYYY-MM-DD
+4. No empty cells
+5. Put just one thing in a cell
+6. Make it a rectangle
+7. Create a data dictionary
+8. No calculations in raw data files
+9. Don't use font color or highlighting as data
+  - The file should be machine-readable, not human readable
+10. Save data as texfiles
