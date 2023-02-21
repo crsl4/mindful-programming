@@ -15,7 +15,7 @@ By the end of the tutorial, you will be able to
 ## Syllabus
 
 | Topic | Lecture notes |
-| :---:   | :---:       |
+| :---   | :---:       |
 | Why do we care about best practices and reproducibility? | [lecture1](https://crsl4.github.io/mindful-programming//lecture-notes/lecture1.html) | 
 | Best computing practices |  [lecture2](https://crsl4.github.io/mindful-programming//lecture-notes/lecture2.html) |
 | Version control | [lecture3](https://crsl4.github.io/mindful-programming//lecture-notes/lecture3.html) |
