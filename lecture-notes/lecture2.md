@@ -68,4 +68,4 @@ This section is inspired by Karl Broman's notes.
 8. No calculations in raw data files
 9. Don't use font color or highlighting as data
   - The file should be machine-readable, not human readable
-10. Save data as texfiles
+10. Save data as text files
